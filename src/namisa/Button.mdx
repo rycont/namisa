@@ -1,0 +1,48 @@
+import { Button } from "../components/button.tsx"
+
+# Button
+
+버튼입니다. 맛있을걸요!
+
+<Namisa
+    controls={{
+        size: {
+            options: ["small", "medium", "big"],
+            default: "medium",
+        },
+        disabled: {
+            default: false,
+            comment: "비활성화된 버튼을 누르면 폭발합니다",
+        },
+        text: {
+            default: "Click Me!",
+        },
+        roundness: {
+            default: 4,
+            type: "slider",
+        },
+        elevation: {
+            default: 2,
+            step: 0.5,
+            max: 10,
+            min: 0,
+        },
+    }}
+>
+    {({ args }) => (
+        <div>
+            <html
+                style={{
+                    fontSize: "4px",
+                }}
+            >
+                <body>
+                    <Button>{args.text}</Button>
+                </body>
+            </html>
+            <pre>{JSON.stringify(args, null, 2)}</pre>
+        </div>
+    )}
+</Namisa>
+
+이렇게 그냥 알아서 잘 해주는거지 뭐 더 있겠어..
