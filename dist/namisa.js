@@ -845,10 +845,7 @@ function jr({
   gr(() => {
     location.hash = o;
   }, [o]);
-  const v = yr(() => o ? br(() => import(
-    /* @vite-ignore */
-    o
-  )) : () => /* @__PURE__ */ f(ee, {}), [o]);
+  const v = yr(() => o ? br(() => import(o)) : () => /* @__PURE__ */ f(ee, {}), [o]);
   return /* @__PURE__ */ F("div", {
     style: {
       display: "flex",
